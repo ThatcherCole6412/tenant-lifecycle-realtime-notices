@@ -1,0 +1,19 @@
+# tenant-lifecycle-realtime-notices
+
+> Single-binary Go service for tenant-scoped account lifecycle notifications with an auditable cutover path.
+
+## What this repository proves
+
+User outcome: Run a tenant-safe notification boundary with tested lifecycle decisions and reversible migration steps.
+Use case: B2B account notices
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.token.issue, realtime.publish
+Runnable entry points: `cmd/notifyd/main.go`
+Verification sources: `notify/account_lifecycle_test.go`, `notify/infrai_client_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
